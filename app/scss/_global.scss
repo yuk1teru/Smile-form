@@ -8,20 +8,31 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
+  padding-top: 45px;
 }
 .title {
+  margin-bottom: 30px;
   font-size: 18px;
   line-height: 2;
   &--red {
     font-size: 12px;
     color: #ff3333;
     font-family: HipstelveticaB, sans-serif;
+
+    padding-right: 5px;
   }
 }
 .links {
+  margin-bottom: 40px;
+  &__item + &__item {
+    margin-top: 12px;
+  }
+  &__item:nth-child(2) {
+    margin-top: 7px;
+  }
   &__link {
     &--default {
       color: #333333;
@@ -43,7 +54,10 @@ body {
 }
 .form {
   &__input {
+    position: relative;
+    z-index: 10;
     padding: 0;
+    margin-bottom: 30px;
     color: #333333;
     border: none;
     border-bottom: 2px solid #363636;
@@ -57,6 +71,7 @@ body {
   &__textarea {
     color: #333333;
     padding: 0;
+    margin-bottom: 40px;
     resize: none;
     width: 100%;
     max-height: 35px;
@@ -70,29 +85,11 @@ body {
   &__textarea::-webkit-input-placeholder {
     color: #333333;
   }
-  .submit-btn {
-    color: #0000ff;
-    border: 2px solid #0000ff;
-    font-size: 18px;
-    line-height: 1.67;
-    padding: 20px 45px;
-    background-color: transparent;
-    text-transform: uppercase;
-    transition: transform 0.3s ease-out;
-    &--invert {
-      color: #ffffff;
-      background-color: #0000ff;
-    }
-    &:hover,
-    &:focus {
-      transform: translateY(2px);
-      transition: transform 0.3s ease-out;
-    }
-  }
 }
 .select {
   position: relative;
   height: 35px;
+  margin-bottom: 30px;
   &__button {
     position: relative;
     width: 100%;
@@ -136,7 +133,7 @@ body {
     }
   }
   &.active {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     .select__button {
       &::before {
         transform: translate(6px, -1px) rotate(135deg);
@@ -150,6 +147,7 @@ body {
       transition: opacity 0.3s ease-out;
     }
     .select__label {
+      text-transform: uppercase;
       max-height: 35px;
       padding-bottom: 5px;
       border-bottom: 2px solid currentColor;
@@ -162,14 +160,13 @@ body {
   }
   &__content {
     position: absolute;
-    top: 35px;
+    top: 50px;
     left: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 300px;
     opacity: 0;
-    transition: opacity 0.3s ease-out;
   }
   &__label {
     max-height: 0;
@@ -182,6 +179,9 @@ body {
 
     cursor: pointer;
     overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
   }
   &__input {
     position: absolute;
@@ -198,7 +198,13 @@ body {
     }
   }
 }
+.panel-box {
+  display: flex;
+  justify-content: space-between;
+}
 .checkbox-panel {
+  display: flex;
+  flex-direction: column;
   &__input {
     position: absolute;
     width: 1px;
@@ -225,16 +231,20 @@ body {
     &::before {
       content: '';
       position: absolute;
-      top: 5px;
+      top: 50%;
       left: 0;
       width: 20px;
       height: 20px;
       background-color: #22f8b9;
+      transform: translateY(-50%);
     }
   }
 }
 
 .radio-panel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
   &__input {
     position: absolute;
     width: 1px;
@@ -267,12 +277,37 @@ body {
     &::before {
       content: '';
       position: absolute;
-      top: 5px;
+      top: 50%;
       left: 0;
       width: 20px;
       height: 20px;
       background-color: #22f8b9;
       border-radius: 50%;
+      transform: translateY(-50%);
     }
+  }
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+}
+.submit-btn {
+  color: #0000ff;
+  border: 2px solid #0000ff;
+  font-size: 18px;
+  line-height: 1.67;
+  padding: 20px 45px;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-out;
+  &--invert {
+    color: #ffffff;
+    background-color: #0000ff;
+  }
+  &:hover,
+  &:focus {
+    transform: translateY(2px);
+    transition: transform 0.3s ease-out;
   }
 }

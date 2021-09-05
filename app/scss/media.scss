@@ -1,0 +1,55 @@
+@media screen and(max-width:320px) {
+  .links {
+    &__link--hovered {
+      display: none;
+    }
+  }
+}
+
+@media screen and(min-width:768px) {
+  .container {
+    max-width: 768px;
+    padding-top: 52px;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 60px;
+    &__input,
+    &__textarea {
+      min-width: 300px;
+    }
+  }
+  .select {
+    min-width: 300px;
+  }
+  .links {
+    order: -2;
+    min-width: 300px;
+  }
+  .panel-box {
+    order: -1;
+    min-width: 300px;
+  }
+}
+#select-1 {
+  order: 0;
+}
+#select-2 {
+  order: 5;
+}
+#select-3 {
+  order: 0;
+}
+.right-box {
+  order: 5;
+}
+
+.mt-170 {
+  margin-top: -170px;
+}

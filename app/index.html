@@ -9,26 +9,32 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="container">
       <h1 class="title">
-        <span class="title--red">h6: </span>Links and form elements
+        <span class="title--red">h6:</span>Links and form elements
       </h1>
-      <ul class="links">
-        <li class="links__item">
-          <a class="links__link links__link--default" href="#">Default link</a>
-        </li>
-        <li class="links__item">
-          <a class="links__link links__link--hovered" href="#">Hovered link</a>
-        </li>
-        <li class="links__item">
-          <a class="links__link links__link--active" href="#">Active link</a>
-        </li>
-        <li class="links__item">
-          <a class="links__link links__link--visited" href="#">Visited link</a>
-        </li>
-      </ul>
 
       <form class="form" action="#" method="post">
+        <ul class="links">
+          <li class="links__item">
+            <a class="links__link links__link--default" href="#"
+              >Default link</a
+            >
+          </li>
+          <li class="links__item">
+            <a class="links__link links__link--hovered" href="#"
+              >Hovered link</a
+            >
+          </li>
+          <li class="links__item">
+            <a class="links__link links__link--active" href="#">Active link</a>
+          </li>
+          <li class="links__item">
+            <a class="links__link links__link--visited" href="#"
+              >Visited link</a
+            >
+          </li>
+        </ul>
         <div class="form__select select" id="select-1">
           <button class="select__button js-select__button-1" type="button">
             No selected element
@@ -58,7 +64,7 @@
             <label class="select__label" for="input-3">Active</label>
           </div>
         </div>
-        <div class="select active" id="select-2">
+        <div class="form__select select active" id="select-2">
           <button class="select__button select__button-2" type="button">
             Select
           </button>
@@ -87,7 +93,7 @@
             /><label class="select__label" for="input-6">Active item</label>
           </div>
         </div>
-        <div class="select" id="select-3">
+        <div class="form__select select" id="select-3">
           <button class="select__button select__button-3" type="button">
             Selected element
           </button>
@@ -118,18 +124,7 @@
             <label class="select__label" for="input-9">Active element</label>
           </div>
         </div>
-        <input
-          class="form__input"
-          type="text"
-          name="text-input"
-          placeholder="Input"
-          autocomplete="off"
-        />
-        <textarea
-          class="form__textarea"
-          name="textarea"
-          placeholder="Text example"
-        ></textarea>
+
         <div class="panel-box">
           <div class="checkbox-panel" role="group">
             <input
@@ -188,11 +183,25 @@
             <label class="radio-panel__label" for="radio-3">Disabled</label>
           </div>
         </div>
-        <div class="button_box">
-          <button class="submit-btn" type="submit">send</button>
-          <button class="submit-btn submit-btn--invert" type="submit">
-            send
-          </button>
+        <div class="right-box">
+          <input
+            class="form__input"
+            type="text"
+            name="text-input"
+            placeholder="Input"
+            autocomplete="off"
+          />
+          <textarea
+            class="form__textarea"
+            name="textarea"
+            placeholder="Text example"
+          ></textarea>
+          <div class="button-box">
+            <button class="submit-btn" type="submit">send</button>
+            <button class="submit-btn submit-btn--invert" type="submit">
+              send
+            </button>
+          </div>
         </div>
       </form>
     </div>

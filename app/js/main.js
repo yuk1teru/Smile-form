@@ -10,9 +10,12 @@ const selectLabelEl3 = selectEl3.querySelectorAll('.select__label');
 
 const selectLabelAll = document.querySelectorAll('.select__label');
 
+const rightBox = document.querySelector('.right-box');
+
 for (let i = 0; i < selectLabelAll.length; i += 1) {
   selectBtnEl1.addEventListener('click', () => {
     selectEl1.classList.toggle('active');
+    test();
   });
 
   selectBtnEl2.addEventListener('click', () => {
@@ -21,6 +24,7 @@ for (let i = 0; i < selectLabelAll.length; i += 1) {
 
   selectBtnEl3.addEventListener('click', () => {
     selectEl3.classList.toggle('active');
+    test();
   });
 }
 
@@ -31,6 +35,7 @@ for (let i = 0; i < selectLabelEl1.length; i += 1) {
     arr.push(needText);
     selectBtnEl1.textContent = needText;
     selectEl1.classList.remove('active');
+
     selectBtnEl1.style.color = '#000';
   });
   selectLabelEl2[i].addEventListener('click', evt => {
@@ -47,6 +52,14 @@ for (let i = 0; i < selectLabelEl1.length; i += 1) {
     arr.push(needText);
     selectBtnEl3.textContent = needText;
     selectEl3.classList.remove('active');
+
     selectBtnEl3.style.color = '#000';
   });
 }
+
+// selectBtnEl1.addEventListener('click', () => {
+
+// });
+// selectBtnEl3.addEventListener('click', () => {
+
+// });
