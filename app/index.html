@@ -5,15 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <style></style>
   </head>
 
   <body>
     <div class="wrapper">
-      <header class="header"></header>
-      <main class="main"></main>
-      <footer class="footer"></footer>
+      <h1 class="title">
+        <span class="title--red">h6: </span>Links and form elements
+      </h1>
+      <ul class="links">
+        <li class="links__item">
+          <a class="links__link links__link--default" href="#">Default link</a>
+        </li>
+        <li class="links__item">
+          <a class="links__link links__link--hovered" href="#">Hovered link</a>
+        </li>
+        <li class="links__item">
+          <a class="links__link links__link--active" href="#">Active link</a>
+        </li>
+        <li class="links__item">
+          <a class="links__link links__link--visited" href="#">Visited link</a>
+        </li>
+      </ul>
+
+      <form class="form" action="#" method="post">
+        <div class="form__select select" id="select-1">
+          <button class="select__button js-select__button-1" type="button">
+            No selected element
+          </button>
+
+          <div class="select__content">
+            <input
+              id="input-1"
+              class="select__input"
+              type="radio"
+              name="select1"
+            />
+            <label class="select__label" for="input-1">First</label>
+            <input
+              id="input-2"
+              class="select__input"
+              type="radio"
+              name="select1"
+            />
+            <label class="select__label" for="input-2">Second</label>
+            <input
+              id="input-3"
+              class="select__input"
+              type="radio"
+              name="select1"
+            />
+            <label class="select__label" for="input-3">Active</label>
+          </div>
+        </div>
+        <div class="select active" id="select-2">
+          <button class="select__button select__button-2" type="button">
+            Select
+          </button>
+
+          <div class="select__content">
+            <input
+              id="input-4"
+              class="select__input"
+              type="radio"
+              name="select2"
+            />
+            <label class="select__label" for="input-4">First item</label>
+
+            <input
+              id="input-5"
+              class="select__input"
+              type="radio"
+              name="select2"
+            /><label class="select__label" for="input-5">Second item</label>
+
+            <input
+              id="input-6"
+              class="select__input"
+              type="radio"
+              name="select2"
+            /><label class="select__label" for="input-6">Active item</label>
+          </div>
+        </div>
+        <div class="select" id="select-3">
+          <button class="select__button select__button-3" type="button">
+            Selected element
+          </button>
+
+          <div class="select__content">
+            <input
+              id="input-7"
+              class="select__input"
+              type="radio"
+              name="select3"
+              checked
+            />
+            <label class="select__label" for="input-7">First element</label>
+            <input
+              id="input-8"
+              class="select__input"
+              type="radio"
+              name="select3"
+              checked
+            />
+            <label class="select__label" for="input-8">Second element</label>
+            <input
+              id="input-9"
+              class="select__input"
+              type="radio"
+              name="select3"
+            />
+            <label class="select__label" for="input-9">Active element</label>
+          </div>
+        </div>
+        <input
+          class="form__input"
+          type="text"
+          name="text-input"
+          placeholder="Input"
+          autocomplete="off"
+        />
+        <textarea
+          class="form__textarea"
+          name="textarea"
+          placeholder="Text example"
+        ></textarea>
+        <div class="panel-box">
+          <div class="checkbox-panel" role="group">
+            <input
+              class="checkbox-panel__input"
+              type="checkbox"
+              name="checkbox-1"
+              id="checkbox-1"
+            />
+            <label class="checkbox-panel__label" for="checkbox-1"
+              >Default</label
+            >
+            <input
+              class="checkbox-panel__input"
+              type="checkbox"
+              name="checkbox-2"
+              id="checkbox-2"
+            />
+            <label class="checkbox-panel__label" for="checkbox-2">Cheked</label>
+            <input
+              class="checkbox-panel__input"
+              type="checkbox"
+              name="checkbox-3"
+              id="checkbox-3"
+              disabled
+            />
+            <label class="checkbox-panel__label" for="checkbox-3"
+              >Disabled</label
+            >
+          </div>
+          <div class="radio-panel" role="group">
+            <input
+              class="radio-panel__input"
+              type="radio"
+              name="radio"
+              id="radio-1"
+              value="chose-1"
+              checked
+            />
+            <label class="radio-panel__label" for="radio-1">Default</label>
+            <input
+              class="radio-panel__input"
+              type="radio"
+              name="radio"
+              id="radio-2"
+              value="chose-2"
+            />
+            <label class="radio-panel__label" for="radio-2">Cheked</label>
+            <input
+              class="radio-panel__input"
+              type="radio"
+              name="radio"
+              id="radio-3"
+              value="chose-3"
+              disabled
+            />
+            <label class="radio-panel__label" for="radio-3">Disabled</label>
+          </div>
+        </div>
+        <div class="button_box">
+          <button class="submit-btn" type="submit">send</button>
+          <button class="submit-btn submit-btn--invert" type="submit">
+            send
+          </button>
+        </div>
+      </form>
     </div>
 
-    <script src="js/main.min.js"></script>
+    <!-- <script src="js/main.min.js"></script> -->
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
