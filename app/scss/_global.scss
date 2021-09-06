@@ -10,8 +10,7 @@ body {
 .container {
   max-width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
-  padding-top: 45px;
+  padding: 45px 15px;
 }
 .title {
   margin-bottom: 30px;
@@ -27,12 +26,8 @@ body {
 }
 .links {
   margin-bottom: 40px;
-  &__item + &__item {
-    margin-top: 12px;
-  }
-  &__item:nth-child(2) {
-    margin-top: 7px;
-  }
+  max-width: 300px;
+
   &__link {
     &--default {
       color: #333333;
@@ -62,7 +57,7 @@ body {
     border: none;
     border-bottom: 2px solid #363636;
     width: 100%;
-    max-width: 300px;
+    max-width: 291px;
     outline: none;
   }
   &__input::-webkit-input-placeholder {
@@ -75,7 +70,7 @@ body {
     resize: none;
     width: 100%;
     max-height: 35px;
-    max-width: 300px;
+    max-width: 291px;
     display: block;
     outline: none;
     border: none;
@@ -94,7 +89,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 300px;
+    max-width: 291px;
 
     padding: 0 0 5px 0;
 
@@ -145,7 +140,9 @@ body {
     .select__content {
       opacity: 1;
       transition: opacity 0.3s ease-out;
+      pointer-events: auto;
     }
+
     .select__label {
       text-transform: uppercase;
       max-height: 35px;
@@ -165,8 +162,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
+    max-width: 291px;
     opacity: 0;
+    pointer-events: none;
   }
   &__label {
     max-height: 0;
@@ -203,6 +201,7 @@ body {
   justify-content: space-between;
 }
 .checkbox-panel {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   &__input {
@@ -221,13 +220,19 @@ body {
     }
     &:disabled + .checkbox-panel__label::before {
       background-color: #eaeaea;
+      cursor: no-drop;
+    }
+    &:disabled + .checkbox-panel__label {
+      cursor: default;
     }
   }
   &__label {
+    max-width: 170px;
     position: relative;
     padding-left: 32px;
     font-family: Marvel_R;
     color: #000000;
+    cursor: pointer;
     &::before {
       content: '';
       position: absolute;
@@ -245,6 +250,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
+  overflow: hidden;
   &__input {
     position: absolute;
     width: 1px;
@@ -267,13 +273,20 @@ body {
     }
     &:disabled + .radio-panel__label::before {
       background-color: #eaeaea;
+      cursor: no-drop;
+    }
+    &:disabled + .radio-panel__label {
+      cursor: default;
     }
   }
   &__label {
     font-family: Marvel_R;
+    max-width: 170px;
     color: #000000;
     position: relative;
     padding-left: 32px;
+    cursor: pointer;
+
     &::before {
       content: '';
       position: absolute;
@@ -289,18 +302,23 @@ body {
 }
 
 .button-box {
+  width: 300px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .submit-btn {
   color: #0000ff;
   border: 2px solid #0000ff;
   font-size: 18px;
   line-height: 1.67;
-  padding: 20px 45px;
+  padding: 12px 45px;
   background-color: transparent;
   text-transform: uppercase;
   transition: transform 0.3s ease-out;
+  cursor: pointer;
+  max-width: 300px;
+  overflow: hidden;
+
   &--invert {
     color: #ffffff;
     background-color: #0000ff;
